@@ -46,7 +46,7 @@
     margin-block-end: 8.6rem;
   }
   @media only screen and (min-width: $desktop-bp) {
-    margin-block-end: 14rem;
+    // margin-bottom: auto;
   }
 
   &__heading-secondary {
@@ -121,6 +121,8 @@
 }
 
 .footer {
+  height: 100%;
+  margin-top: auto;
   background-color: var(--clr-primary);
   &__logo {
     width: 9rem;

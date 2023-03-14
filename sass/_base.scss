@@ -95,7 +95,7 @@ html:focus-within {
 // }
 
 body {
-  // min-height: 100vh;
+  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -138,6 +138,9 @@ body {
   color: var(--clr-primary);
 
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
 
   background-image: linear-gradient(
     var(--clr-neutral-white),
