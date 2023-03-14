@@ -5,11 +5,172 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <p>Hello</p>
-    </div>
+    <header class="header container">
+      <img
+        src="/assets/logo-dark.svg"
+        alt="Skilled company logo"
+        class="header__logo"
+      />
+      <button class="button button--header">Get Started</button>
+    </header>
+    <main>
+      <section class="hero container">
+        <div class="hero__text-box">
+          <h1 class="hero__heading">Maximize skill, minimize budget</h1>
+          <p class="hero__description">
+            Our modern courses across a range of in-demand skills will give you
+            the knowledge you need to live the life you want.
+          </p>
+          <button class="button button--hero">Get Started</button>
+        </div>
+        <div class="hero__image-box">
+          <picture class="hero__image">
+            <!-- Mobile webp -->
+            <source
+              srcset="
+                /assets/image-hero-mobile@2x.webp 2x,
+                /assets/image-hero-mobile.webp    1x
+              "
+              media="(max-width: 24em)"
+              type="image/webp"
+            />
+            <!-- Mobile png -->
+            <source
+              srcset="
+                /assets/image-hero-mobile@2x.png 2x,
+                /assets/image-hero-mobile.png    1x
+              "
+              media="(max-width: 24em)"
+              type="image/png"
+            />
+            <!-- Tablet webp -->
+            <source
+              srcset="
+                /assets/image-hero-tablet@2x.webp 2x,
+                /assets/image-hero-tablet.webp    1x
+              "
+              media="(max-width: 48em)"
+              type="image/webp"
+            />
+            <!-- Tablet png -->
+            <source
+              srcset="
+                /assets/image-hero-tablet@2x.png 2x,
+                /assets/image-hero-tablet.png    1x
+              "
+              media="(max-width: 48em)"
+              type="image/png"
+            />
+            <!-- Desktop webp -->
+            <source
+              srcset="
+                /assets/image-hero-desktop@2x.webp 2x,
+                /assets/image-hero-desktop.webp    1x
+              "
+              type="image/webp"
+            />
+            <img
+              srcset="
+                /assets/image-hero-desktop@2x.png 2x,
+                /assets/image-hero-desktop.png    1x
+              "
+              src="/assets/image-hero-desktop@2x.png"
+              alt=""
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="feature container">
+        <div class="feature__wrapper">
+          <h2 class="feature__heading-secondary">
+            Check out our most popular courses!
+          </h2>
+          <div class="feature__box">
+            <img
+              src="/assets/icon-animation.svg"
+              alt="Animation icon"
+              class="feature__icon"
+            />
+            <h3 class="feature__heading-tertiary">Animation</h3>
+            <p class="feature__description">
+              Learn the latest animation techniques to create stunning motion
+              design and captivate your audience.
+            </p>
+            <a href="#" class="feature__link">Get Started</a>
+          </div>
+          <div class="feature__box">
+            <img
+              src="/assets/icon-design.svg"
+              alt="Design icon"
+              class="feature__icon"
+            />
+            <h3 class="feature__heading-tertiary">Design</h3>
+            <p class="feature__description">
+              Learn the latest animation techniques to create stunning motion
+              design and captivate your audience.
+            </p>
+            <a href="#" class="feature__link">Get Started</a>
+          </div>
+          <div class="feature__box">
+            <img
+              src="/assets/icon-photography.svg"
+              alt="Photography icon"
+              class="feature__icon"
+            />
+            <h3 class="feature__heading-tertiary">Photography</h3>
+            <p class="feature__description">
+              Explore critical fundamentals like lighting, composition, and
+              focus to capture exceptional photos.
+            </p>
+            <a href="#" class="feature__link">Get Started</a>
+          </div>
+          <div class="feature__box">
+            <img
+              src="/assets/icon-crypto.svg"
+              alt="Crypto icon"
+              class="feature__icon"
+            />
+            <h3 class="feature__heading-tertiary">Crypto</h3>
+            <p class="feature__description">
+              All you need to know to get started investing in crypto. Go from
+              beginner to advanced with this 54 hour course.
+            </p>
+            <a href="#" class="feature__link">Get Started</a>
+          </div>
+          <div class="feature__box">
+            <img
+              src="/assets/icon-business.svg"
+              alt="Business icon"
+              class="feature__icon"
+            />
+            <h3 class="feature__heading-tertiary">Business</h3>
+            <p class="feature__description">
+              A step-by-step playbook to help you start, scale, and sustain your
+              business without outside investment.
+            </p>
+            <a href="#" class="feature__link">Get Started</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <img
+          src="/assets/logo-light.svg"
+          alt="Skilled company logo"
+          class="footer__logo"
+        />
+        <button class="button button--footer">Get Started</button>
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

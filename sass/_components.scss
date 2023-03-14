@@ -1,0 +1,123 @@
+.header {
+  &__logo {
+    width: 9rem;
+  }
+}
+
+.hero {
+  margin-block-end: 2.5rem;
+  &__heading {
+    font-size: var(--fs-heading-primary);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-heading-primary);
+    margin-block-end: 2.6rem;
+  }
+
+  &__description {
+    font-size: var(--fs-body-s);
+    line-height: var(--lh-body);
+    color: var(--clr-neutral-grey);
+    margin-block-end: 2.4rem;
+  }
+  &__image {
+    margin-block-start: 7rem;
+    transform: scale(1.25);
+  }
+}
+
+.feature {
+  --box-max-width: 34.3rem;
+  margin-block-end: 8rem;
+
+  &__heading-secondary {
+    font-size: var(--fs-heading-secondary);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-heading-secondary);
+    padding: 3.2rem 2.8rem;
+    color: var(--clr-neutral-white);
+    border-radius: 1rem;
+    max-width: var(--box-max-width);
+    background-image: linear-gradient(
+      to top,
+      var(--clr-gradient-primary-1),
+      var(--clr-gradient-primary-2)
+    );
+  }
+  &__box {
+    --padding-inline: 2.8rem;
+
+    position: relative;
+    max-width: var(--box-max-width);
+    background-color: var(--clr-neutral-white);
+    border-radius: 1rem;
+    padding: 5.6rem var(--padding-inline) 3.2rem var(--padding-inline);
+  }
+
+  &__icon {
+    position: absolute;
+    top: -2.4rem;
+  }
+
+  &__heading-tertiary {
+    font-size: var(--fs-heading-tertiary);
+    font-weight: var(--fw-extra-bold);
+    margin-block-end: 1.6rem;
+  }
+
+  &__description {
+    font-size: var(--fs-body-s);
+    line-height: var(--lh-body);
+    color: var(--clr-neutral-grey);
+    margin-block-end: 2.4rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      font-size: var(--fs-body-m);
+      font-weight: var(--fw-bold);
+      text-decoration: none;
+      color: var(--clr-link);
+      line-height: 2.8rem;
+    }
+  }
+}
+
+.footer {
+  background-color: var(--clr-primary);
+  &__logo {
+    width: 9rem;
+  }
+}
+
+.button {
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-white);
+  border: none;
+  border-radius: 100vw;
+
+  &--header {
+    background-color: var(--clr-primary);
+    padding: 1.4rem 2.4rem;
+  }
+
+  &--hero {
+    padding: 1.8rem 3.8rem;
+
+    background-image: linear-gradient(
+      to top,
+      var(--clr-gradient-primary-1),
+      var(--clr-gradient-primary-2)
+    );
+  }
+
+  &--footer {
+    padding: 1.4rem 2.4rem;
+
+    background-image: linear-gradient(
+      to bottom,
+      var(--clr-gradient-secondary-1),
+      var(--clr-gradient-secondary-2)
+    );
+  }
+}

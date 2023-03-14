@@ -1,0 +1,151 @@
+:root {
+  --clr-primary: #13183f;
+  --clr-primary-accent: #666ca3;
+
+  --clr-secondary: #f74780;
+  --clr-secondary-accent: #ffa7c3;
+
+  --clr-neutral-white: #fff;
+  --clr-neutral-grey: #83869a;
+
+  --clr-gradient-primary-1: #f02aa6;
+  --clr-gradient-primary-2: #ff6f48;
+
+  --clr-gradient-secondary-1: #4851ff;
+  --clr-gradient-secondary-2: #f02aa6;
+
+  --clr-gradient-background: #f0f1ff;
+  --clr-link: #f74780;
+
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  --fs-heading-primary: 4rem;
+  --fs-heading-secondary: 2.4rem;
+  --fs-heading-tertiary: 2rem;
+  --fs-body-m: 1.8rem;
+  --fs-body-s: 1.6rem;
+
+  // Changing font sizes for desktop
+  @media only screen and (min-width: 48em) {
+    --fs-heading-primary: 5.6rem;
+    --fs-heading-secondary: 3.2rem;
+    --fs-heading-tertiary: 2.4rem;
+
+    --fs-body-s: 1.8rem;
+  }
+
+  --lh-heading-primary: 5.1rem;
+  --lh-heading-secondary: 2.8rem;
+  --lh-body: 2.6rem;
+
+  // Changing line heights for desktop
+  @media only screen and (min-width: 48em) {
+    --lh-heading-primary: 7rem;
+    --lh-heading-secondary: 4rem;
+    --lh-body: 2.8rem;
+  }
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, padding */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set 1rem to 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+// html,
+// body {
+//   height: 100%;
+// }
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General styling */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-medium);
+  line-height: 1.26;
+  color: var(--clr-primary);
+
+  overflow-x: hidden;
+
+  background-image: linear-gradient(
+    var(--clr-neutral-white),
+    var(--clr-gradient-background)
+  );
+}
+
+/* Utility classes */
+.container {
+  --max-width: 111rem;
+  --container-padding: 1.6rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
