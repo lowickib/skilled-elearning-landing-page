@@ -6,6 +6,9 @@
 
 .hero {
   margin-block-end: 2.5rem;
+  @media only screen and (min-width: $tablet-bp) {
+    margin-block-end: 21rem;
+  }
   &__heading {
     font-size: var(--fs-heading-primary);
     font-weight: var(--fw-extra-bold);
@@ -19,15 +22,32 @@
     color: var(--clr-neutral-grey);
     margin-block-end: 2.4rem;
   }
+  &__image-box {
+    display: flex;
+    justify-content: center;
+  }
   &__image {
     margin-block-start: 7rem;
+    z-index: -1;
     transform: scale(1.25);
+    @media only screen and (min-width: $tablet-bp) {
+      transform: scale(1);
+    }
+    @media only screen and (min-width: $desktop-bp) {
+      transform: scale(0.8);
+    }
   }
 }
 
 .feature {
-  --box-max-width: 34.3rem;
+  // --box-max-width: 34.3rem;
   margin-block-end: 8rem;
+  @media only screen and (min-width: $tablet-bp) {
+    margin-block-end: 8.6rem;
+  }
+  @media only screen and (min-width: $desktop-bp) {
+    margin-block-end: 14rem;
+  }
 
   &__heading-secondary {
     font-size: var(--fs-heading-secondary);
@@ -36,18 +56,24 @@
     padding: 3.2rem 2.8rem;
     color: var(--clr-neutral-white);
     border-radius: 1rem;
-    max-width: var(--box-max-width);
+    // max-width: var(--box-max-width);
     background-image: linear-gradient(
       to top,
       var(--clr-gradient-primary-1),
       var(--clr-gradient-primary-2)
     );
+    @media only screen and (min-width: $tablet-bp) {
+      padding: 5.6rem 3.2rem;
+    }
   }
   &__box {
     --padding-inline: 2.8rem;
+    @media only screen and (min-width: $tablet-bp) {
+      --padding-inline: 3.2rem;
+    }
 
     position: relative;
-    max-width: var(--box-max-width);
+    // max-width: var(--box-max-width);
     background-color: var(--clr-neutral-white);
     border-radius: 1rem;
     padding: 5.6rem var(--padding-inline) 3.2rem var(--padding-inline);
@@ -69,6 +95,7 @@
     line-height: var(--lh-body);
     color: var(--clr-neutral-grey);
     margin-block-end: 2.4rem;
+    // margin-block-end: auto;
   }
   &__link {
     &:link,
@@ -78,6 +105,17 @@
       text-decoration: none;
       color: var(--clr-link);
       line-height: 2.8rem;
+      align-self: end;
+    }
+  }
+  &__box:nth-child(3) {
+    .feature__description {
+      margin-block-end: 5.2rem;
+    }
+  }
+  &__box:nth-child(4) {
+    .feature__description {
+      margin-block-end: 5.2rem;
     }
   }
 }
@@ -95,10 +133,23 @@
   color: var(--clr-neutral-white);
   border: none;
   border-radius: 100vw;
+  cursor: pointer;
 
   &--header {
-    background-color: var(--clr-primary);
+    background-image: linear-gradient(
+      to top,
+      var(--clr-primary),
+      var(--clr-primary)
+    );
     padding: 1.4rem 2.4rem;
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(to top, var(--clr-primary), var(--clr-primary));
+    }
   }
 
   &--hero {
@@ -109,6 +160,18 @@
       var(--clr-gradient-primary-1),
       var(--clr-gradient-primary-2)
     );
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(
+          to top,
+          var(--clr-gradient-primary-1),
+          var(--clr-gradient-primary-2)
+        );
+    }
   }
 
   &--footer {
@@ -119,5 +182,52 @@
       var(--clr-gradient-secondary-1),
       var(--clr-gradient-secondary-2)
     );
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(
+          to bottom,
+          var(--clr-gradient-secondary-1),
+          var(--clr-gradient-secondary-2)
+        );
+    }
   }
+}
+
+/* Attribution */
+.attribution {
+  font-size: var(--fs-body-s);
+  padding: 2rem;
+  color: var(--clr-neutral-white);
+  text-align: center;
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    var(--clr-gradient-secondary-1),
+    var(--clr-gradient-secondary-2)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  transition: all 0.2s;
+}
+
+.attribution__link:hover,
+.attribution__link:active {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--clr-gradient-secondary-1),
+      var(--clr-gradient-secondary-2)
+    );
 }

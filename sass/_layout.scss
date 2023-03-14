@@ -3,16 +3,59 @@
   align-items: center;
   justify-content: space-between;
   margin-block: 1.6rem 4.8rem;
+
+  @media only screen and (min-width: $tablet-bp) {
+    margin-block: 2.4rem 10rem;
+  }
+  @media only screen and (min-width: $desktop-bp) {
+    margin-block: 2.4rem 17.8rem;
+  }
+}
+
+.hero {
+  position: relative;
+  @media only screen and (min-width: $tablet-bp) {
+    &__text-box {
+      width: 60%;
+    }
+    &__image {
+      position: absolute;
+      right: -33rem;
+      top: -33rem;
+    }
+  }
+  @media only screen and (min-width: $desktop-bp) {
+    &__text-box {
+      width: 45%;
+    }
+    &__description {
+      max-width: 33ch;
+    }
+    &__image {
+      position: absolute;
+      right: -52rem;
+      top: -45rem;
+    }
+  }
 }
 
 .feature {
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, var(--box-max-width));
+    grid-template-columns: 34.3rem;
     row-gap: 4rem;
     column-gap: 1.1rem;
     margin-inline: auto;
     justify-content: center;
+    @media only screen and (min-width: $tablet-bp) {
+      grid-template-columns: 35rem 35rem;
+      row-gap: 5.6rem;
+    }
+    @media only screen and (min-width: $desktop-bp) {
+      grid-template-columns: 35rem 35rem 35rem;
+      row-gap: 5.6rem;
+      column-gap: 3rem;
+    }
   }
   &__heading-secondary {
     align-self: stretch;
