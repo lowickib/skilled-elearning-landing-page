@@ -25,6 +25,7 @@
   &__image-box {
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
   &__image {
     margin-block-start: 7rem;
